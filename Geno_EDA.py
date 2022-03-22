@@ -29,6 +29,7 @@ X = train_df.drop(columns=['target'])
 # Label Encoder
 from sklearn.preprocessing import LabelEncoder
 encoder = LabelEncoder()
+# Convert the 10 bacteria names to the integers 0 .. 9
 y = encoder.fit_transform(y)
 
 # Dataset Spliting for training/ testing set
