@@ -37,3 +37,16 @@ X_train, X_valid , y_train , y_valid = train_test_split(X, y, test_size = 0.2, r
 
 # Check content
 tools.check(train_df)
+
+# Feature Extract
+feature = [col for col in train_df.columns if col not in ['row_id', 'target']]
+
+# Print the content
+fig, axs = plt.subplots(5, 3, figsize=(17,20))
+i = 0
+for f in f:
+    current_ax = axs.flat[i]
+    current_ax.hist(train_df[f], bins=100)
+    current_ax.set_title(f)
+    current_ax.grid()
+    i = i + 1
